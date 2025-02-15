@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>苏菜专区</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4; 
+        }
+        .header {
+            background-color: #555; 
+            color: #fff;
+            text-align: center; 
+            padding: 20px 0; 
+        }
+        .header h1 {
+            color: #008000; 
+            margin: 0; 
+        }
+        .content {
+            padding: 20px; 
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <div class="header">
+        <h1>苏菜</h1>
+    </div>
+    <div class="content">
+        <h2>欢迎来到苏菜专区</h2>
+        <p>苏菜，又称江苏菜，是中国八大菜系之一，起源于长江下游的江苏地区。
+苏菜以其精致的烹饪工艺、清淡的口味和对食材原味的尊重而著称。
+它特别擅长烹饪淡水鱼和湖鲜，以及各种蔬菜和豆制品。
+苏菜强调色、香、味、形的和谐统一，注重食材的新鲜和季节性，以其独特的甜咸口味和精致的刀工技艺，
+展现了江南水乡的细腻与雅致。
+</p>
+        <!-- 1<a href="lucai1.jpg" class="menu-item">
+             2
+             3 -->
+    </div>
+    </center>
+</body>
+</html>

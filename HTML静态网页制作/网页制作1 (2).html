@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>今天吃什么</title>
+    <style>
+        body {
+            background-image: url('background.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+            color: #fff; 
+        }
+        .menu-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            margin-top: 50px; 
+        }
+        .menu-item {
+            margin: 0 10px;
+            text-align: center; /* 使图片和文字居中 */
+        }
+        .menu-container .menu-item:nth-child(1) { color: #FF0000; } 
+        .menu-container .menu-item:nth-child(2) { color: #00FF00; } 
+        .menu-container .menu-item:nth-child(3) { color: #0000FF; } 
+        .menu-container .menu-item:nth-child(4) { color: #FFFF00; }
+        .menu-container .menu-item:nth-child(5) { color: #FF00FF; } 
+        .menu-container .menu-item:nth-child(6) { color: #00FFFF; } 
+        .menu-container .menu-item:nth-child(7) { color: #C0C0C0; } 
+        .menu-container .menu-item:nth-child(8) { color: #800000; } 
+        h1 {
+            font-size: 48px; /* 增加字体大小 */
+        }
+        .menu-item img {
+            width: 100px; /* 设置图片宽度，根据需要调整 */
+            height: auto; /* 高度自适应 */
+            margin-top: 10px; /* 图片与文字之间的间距 */
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>欢迎光临 今天想吃些什么？</h1>
+        <br>
+        <hr>
+        <h1>主菜单</h1> <!-- 一级标题 -->
+        <div class="menu-container">
+            <a href="https://home.meishichina.com/recipe/chuancai/" class="menu-item" target="_blank">川菜</a>
+                <img src="chuancai.jpg" alt="chuan菜图片">
+            <a href="鲁菜.html" class="menu-item">鲁菜</a>
+                <img src="lucai.jpg" alt="鲁菜图片">    
+            <a href="苏菜.html" class="menu-item">苏菜</a>
+                <img src="sucai.jpg" alt="苏菜图片"> 
+            <div class="menu-item">浙菜
+                <img src="zhecai.jpg" alt="浙菜图片">
+            </div>
+            <div class="menu-item">闽菜
+                <img src="mincai.jpg" alt="闽菜图片">
+            </div>
+            <div class="menu-item">湘菜
+                <img src="xiangcai.jpg" alt="湘菜图片">
+            </div>
+            <div class="menu-item">粤菜
+                <img src="yuecai.jpg" alt="粤菜图片">
+            </div>
+            <div class="menu-item">徽菜
+                <img src="huicai.jpg" alt="徽菜图片">
+            </div>
+        </div>
+    </center>
+</body>
+</html>
