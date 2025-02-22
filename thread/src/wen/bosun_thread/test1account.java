@@ -2,45 +2,40 @@ package wen.bosun_thread;
 
 public class test1account {
     private String cardID;
-    private double money;
-
-    public test1account() {
-    }
+    double money;
 
     public test1account(String cardID) {
         this.cardID = cardID;
+        this.money = 0; // 初始化金额为0
     }
 
     public test1account(double money) {
         this.money = money;
     }
 
-    public void getmoney(double money) {
-        String name=Thread.currentThread().getName();
-        //判断余额是否足够
-        if (this.money >= money) {
-            System.out.println(name+"取钱"+money+"已取出");
-            this.money -= money;
-            System.out.println(name+"取钱后剩余"+this.money);
-        }else {
-            System.out.println(name+"余额不足");
-        }
+    public void setMoney(double money) {
+        this.money = money;
     }
 
     public double getMoney(int i) {
-        return money;
-    }
-
-    public void setMoney(double money) {
-        this.money = money;
+        synchronized ("wen") { // 使用 "wen" 作为同步锁
+            if (this.money >= 0) { // 修改条件：账户金额是否>=10000元
+                System.out.println(Thread.currentThread().getName() + "取钱" + i + "已取出");
+                this.money -= i;
+                System.out.println(Thread.currentThread().getName() + "取钱后剩余：" + this.money);
+            } else {
+                System.out.println(Thread.currentThread().getName() + "账户金额不足，无法取钱");
+            }
+        }
+        return this.money;
     }
 
     public String getCardID() {
         return cardID;
     }
-
-    public void setCardID(String cardID) {
-        this.cardID = cardID;
-    }
 }
+
+
+
+
 
