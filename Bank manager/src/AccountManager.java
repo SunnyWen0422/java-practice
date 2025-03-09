@@ -1,16 +1,16 @@
+// AccountManager.java
 import java.util.ArrayList;
 import java.util.List;
+
 public class AccountManager {
     private List<Account> accounts;
+
     public AccountManager() {
         accounts = new ArrayList<>();
-
-        accounts.add(new Account("0001","770609",10000));
-        accounts.add(new Account("0002","050422",5000));
+        accounts.add(new Account("0001", "770609", 10000, false));
+        accounts.add(new Account("0002", "050422", 5000, false));
     }
 
-    @param cardNumber
-    @return
     public Account findAccount(String cardNumber) {
         for (Account account : accounts) {
             if (account.getCardNumber().equals(cardNumber)) {
@@ -19,13 +19,9 @@ public class AccountManager {
         }
         return null;
     }
-    @param fromAccount
-    @param toCardNumber
-    @param amount
-    @return
 
     public boolean transfer(Account fromAccount, String toCardNumber, double amount) {
-        if (amount <= 0 || amount > fromAccount.getBalance()) {
+        if (fromAccount == null || amount <= 0 || amount > fromAccount.getBalance()) {
             return false;
         }
         Account toAccount = findAccount(toCardNumber);
@@ -36,18 +32,17 @@ public class AccountManager {
         toAccount.setBalance(toAccount.getBalance() + amount);
         return true;
     }
-    @return
-        public List<Account> getAllAccounts() {
-            return new ArrayList<>(accounts);
+
+    public List<Account> getAllAccounts() {
+        return new ArrayList<>(accounts);
     }
-    @param account
-    @return
 
     public boolean addAccount(Account account) {
-        if (findAccount(account.getCardNumber()) != null) {
+        if (account == null || findAccount(account.getCardNumber()) != null) {
             return false;
-    }
+        }
         accounts.add(account);
         return true;
     }
 }
+

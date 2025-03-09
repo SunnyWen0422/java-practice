@@ -8,7 +8,7 @@ public class Account {
         this.cardNumber = cardNumber;
         this.password = password;
         this.balance = balance;
-        this.isLocked = false;
+        this.isLocked = isLocked;
     }
     public String getCardNumber() {
         return cardNumber;
@@ -31,17 +31,24 @@ public class Account {
     public void changePassword(String newPassword){
         this.password = newPassword;
     }
-    @param amount
-    @return
     public boolean deposit(double amount){
         if (amount <= 0){
             return false;
         }
-        this.balance -= amount;
+        this.balance += amount;
             return true;
     }
+    // 添加 withdraw 方法
+    public boolean withdraw(double amount) {
+        if (amount <= 0 || amount > this.balance) {
+            return false;
+        }
+        this.balance -= amount;
+        return true;
+    }
+
     @Override
     public String toString() {
-        return "账户{"+"银行卡密码："+cardNumber+"balance:"+balance+",被锁定"+isLocked+"}";
+        return "账户{"+"卡号："+cardNumber+"余额:"+balance+",锁定状态"+isLocked+"}";
     }
 }
