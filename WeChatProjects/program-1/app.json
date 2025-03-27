@@ -1,0 +1,13 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/history-query/history-query" 
+  ],
+  "window": {
+    "navigationBarTitleText": "学习计时器",
+    "navigationBarBackgroundColor": "#f5f7fa",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

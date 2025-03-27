@@ -1,0 +1,39 @@
+<view class="container">
+  <!-- 状态指示器 -->
+  <view class="status-indicator {{currentSession ? 'active' : ''}}">
+    <text class="iconfont icon-clock"></text>
+  </view>
+
+  <!-- 时间显示 -->
+  <view class="time-display" wx:if="{{currentSession}}">
+    {{currentSession.startTime.split(' ')[1]}}
+  </view>
+
+  <!-- 操作按钮组 -->
+  <view class="action-buttons">
+    <button 
+      class="btn start-btn {{!currentSession ? 'pulse' : ''}}" 
+      bindtap="startTimer"
+    >
+      <text class="iconfont icon-play"></text>
+      <text>开始专注</text>
+    </button>
+    
+    <button 
+      class="btn end-btn {{currentSession ? 'shake' : ''}}" 
+      bindtap="endTimer"
+    >
+      <text class="iconfont icon-stop"></text>
+      <text>结束计时</text>
+    </button>
+  </view>
+
+  <!-- 快捷入口 -->
+  <view class="quick-access">
+    <view class="access-card" bindtap="navigateToHistoryQuery">
+      <text class="iconfont icon-history"></text>
+      <text>学习计时</text>
+      <text class="subtext">已记录{{studyCount}}次</text>
+    </view>
+  </view>
+</view>
