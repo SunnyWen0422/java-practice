@@ -1,0 +1,35 @@
+<!--pages/index/index.wxml-->
+<view class="container">
+  <text class="title">{{i18n.title}}</text>
+  
+  <!-- 时钟画布 -->
+  <canvas class="clock" canvas-id="clockCanvas"></canvas>
+
+  <!-- 计时器显示 -->
+  <text class="timer-text">{{formattedTimer}}</text>
+
+  <!-- 秒表显示 -->
+  <view class="stopwatch-container">
+    <text class="stopwatch-time">{{stopwatchTime}}</text>
+  </view>
+
+  <!-- 整合后的功能按钮组 -->
+  <view class="button-group">
+    <button class="btn start-btn" bindtap="startTimer">
+      <text class="iconfont icon-play"></text>
+      {{i18n.start}}
+    </button>
+    <button class="btn end-btn" bindtap="endTimer">
+      <text class="iconfont icon-stop"></text>
+      {{i18n.end}}
+    </button>
+    <button class="btn note-btn" bindtap="navigateToNote">
+      <text class="iconfont icon-note"></text>
+      {{i18n.note}}
+    </button>
+    <button class="btn history-btn" bindtap="navigateToHistoryQuery">
+      <text class="iconfont icon-history"></text>
+      {{i18n.history}}
+    </button>
+  </view>
+</view>

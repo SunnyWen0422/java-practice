@@ -1,0 +1,7 @@
+<view class="container">
+  <picker mode="date" value="{{selectedDate}}" bindchange="onDateChange">
+    <view class="picker">
+      选择日期: {{selectedDate}}
+    </view>
+  </picker>
+</view>

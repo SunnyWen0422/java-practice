@@ -1,0 +1,73 @@
+/* ... existing code ... */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #e0f7fa, #b3e5fc); /* 调整背景渐变色 */
+    min-height: 100vh;
+}
+
+.title {
+    font-size: 28px; /* 增大标题字体 */
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    letter-spacing: 2px; /* 增加字间距 */
+}
+
+.stopwatch-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.stopwatch-time {
+    font-size: 48px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20rpx;
+    margin-top: 60rpx;
+}
+
+.btn {
+    width: 280rpx;
+    height: 100rpx;
+    border-radius: 16rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    transition: transform 0.2s;
+}
+
+.btn text {
+    margin-left: 12rpx;
+    font-size: 28rpx;
+}
+
+.start-btn {
+    background: var(--primary-color);
+    color: white;
+}
+
+.end-btn {
+    background: var(--secondary-color);
+    color: white;
+}
+
+.history-btn {
+    background-color: #9c27b0; /* 改为紫色更符合查询功能 */
+    color: white;
+}
+
+.note-btn {
+    background-color: #f44336; /* 改为红色更符合笔记功能 */
+    color: white;
+}
+/* ... existing code ... */

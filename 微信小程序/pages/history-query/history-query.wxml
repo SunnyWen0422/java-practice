@@ -1,0 +1,76 @@
+<view class="container">
+  <!-- 头部卡片 -->
+  <view class="header-card">
+    <text class="total-text">累计学习</text>
+    <text class="total-duration">{{totalDuration}}</text>
+  </view>
+
+  <!-- 视图切换器 -->
+  <view class="view-switcher">
+    <view 
+      class="switch-item {{showCalendar ? 'active' : ''}}" 
+      bindtap="toggleView"
+    >
+      <text class="iconfont icon-calendar"></text>
+      <text>日历视图</text>
+    </view>
+    <view 
+      class="switch-item {{!showCalendar ? 'active' : ''}}" 
+      bindtap="toggleView"
+    >
+      <text class="iconfont icon-list"></text>
+      <text>列表视图</text>
+    </view>
+  </view>
+
+  <!-- 加载状态 -->
+  <view class="loading" wx:if="{{isLoading}}">
+    <text>加载中...</text>
+  </view>
+
+  <!-- 日历模块优化 -->
+  <view class="calendar-container" wx:if="{{showCalendar}}">
+    <view class="calendar-header">
+      <text class="selected-date">{{selectedDate}}</text>
+      <!-- 添加日期选择器 -->
+      <picker mode="date" value="{{selectedDate}}" bindchange="onDateChange">
+        <text class="iconfont icon-edit"></text>
+      </picker>
+    </view>
+    <!-- 显示选中日期的累计时长 -->
+    <view class="date-summary">
+      <text>{{selectedDate}} 累计学习时长：{{totalDuration}}</text>
+    </view>
+  </view>
+
+  <!-- 列表模块 -->
+  <view class="list-container" wx:else>
+    <view 
+      class="record-card" 
+      wx:for="{{selectedDateRecords}}" 
+      wx:key="index"
+      animation="{{animateIn}}"
+    >
+      <view class="time-range">
+        <text class="time">{{item.startTime}}</text>
+        <text class="separator">→</text>
+        <text class="time">{{item.endTime}}</text>
+      </view>
+      <view class="duration-badge">
+        {{item.duration}}
+      </view>
+    </view>
+    
+    <!-- 空状态 -->
+    <view class="empty-state" wx:if="{{selectedDateRecords.length === 0}}">
+      <text class="iconfont icon-empty"></text>
+      <text>暂无学习记录</text>
+    </view>
+  </view>
+
+  <!-- 按钮组 -->
+  <view class="button-group">
+    <button class="btn" bindtap="navigateBack">返回</button>
+    <button class="btn" bindtap="toggleView">切换视图</button>
+  </view>
+</view>

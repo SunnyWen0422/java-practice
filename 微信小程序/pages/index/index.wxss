@@ -1,0 +1,251 @@
+/* pages/index/index.wxss */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #e0f7fa, #b3e5fc); /* 调整背景渐变色 */
+    min-height: 100vh;
+  }
+  
+  .title {
+    font-size: 28px; /* 增大标题字体 */
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    letter-spacing: 2px; /* 增加字间距 */
+  }
+  
+  .clock {
+    width: 200px;
+    height: 200px;
+    margin: 20px auto;
+  }
+
+  .timer-text {
+    display: block;
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  .button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .btn {
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 添加按钮阴影 */
+    transition: transform 0.2s ease; /* 添加点击动画 */
+  }
+  .btn:active {
+    transform: scale(0.95); /* 缩小比例调整 */
+    transition: transform 0.1s ease-in-out; /* 动画时间调整 */
+  }
+  .start-btn {
+    background-color: #4caf50; /* 绿色 */
+  }
+  
+  .end-btn {
+    background-color: #f44336; /* 红色 */
+  }
+  
+.history-btn {
+  background-color: #9c27b0; /* 改为紫色更符合查询功能 */
+}
+  .current-session {
+    margin: 20px 0;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.9); /* 提高背景透明度 */
+    border-radius: 8px;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+  }
+  
+  .session-text {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .message {
+    margin: 10px 0;
+    font-size: 16px; /* 增大提示信息字体 */
+    color: #424242; /* 调整文字颜色 */
+    text-align: center;
+  }
+  /* 状态指示器 */
+.status-indicator {
+  width: 120rpx;
+  height: 120rpx;
+  background: rgba(255,255,255,0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--card-shadow);
+  transition: all 0.3s ease;
+}
+.status-indicator.active {
+  background: var(--primary-color);
+}
+.status-indicator.active .iconfont {
+  color: white;
+}
+
+/* 时间显示 */
+.time-display {
+  font-size: 64rpx;
+  font-weight: 300;
+  letter-spacing: 4rpx;
+  color: var(--text-primary);
+  margin: 40rpx 0;
+}
+
+/* 按钮组优化 */
+.action-buttons {
+  display: flex;
+  gap: 30rpx;
+  margin: 60rpx 0;
+}
+
+.btn {
+  width: 280rpx;
+  height: 100rpx;
+  border-radius: 16rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  transition: transform 0.2s;
+}
+
+.btn text {
+  margin-left: 12rpx;
+  font-size: 28rpx;
+}
+
+.start-btn {
+  background: var(--primary-color);
+  color: white;
+}
+
+.end-btn {
+  background: var(--secondary-color);
+  color: white;
+}
+
+/* 新增脉冲动画 */
+.pulse-animation {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.stopwatch-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.stopwatch-time {
+    font-size: 48px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20rpx;
+    margin-top: 60rpx;
+}
+
+.btn {
+    width: 280rpx;
+    height: 100rpx;
+    border-radius: 16rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: var(--card-shadow);
+}
+
+.btn:hover {
+    box-shadow: 0 12rpx 40rpx rgba(0, 0, 0, 0.15);
+}
+
+.btn:active {
+    transform: scale(0.95);
+    box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.1);
+}
+
+.start-btn {
+    background: var(--primary-color);
+    color: white;
+}
+
+.end-btn {
+    background: var(--secondary-color);
+    color: white;
+}
+
+.history-btn {
+    background-color: #9c27b0; /* 改为紫色更符合查询功能 */
+    color: white;
+}
+
+.note-btn {
+    background-color: #f44336; /* 改为红色更符合笔记功能 */
+    color: white;
+}
+
+/* 新增脉冲动画 */
+.pulse-animation {
+    animation: pulse 1.5s infinite;
+}
+
+.stopwatch-container {
+  margin: 30rpx 0;
+  padding: 20rpx;
+  background: rgba(255,255,255,0.9);
+  border-radius: 16rpx;
+  width: 100%;
+  box-shadow: var(--card-shadow);
+}
+
+.stopwatch-time {
+  font-size: 64rpx;
+  font-weight: 300;
+  color: var(--text-primary);
+  margin: 20rpx 0;
+}
+
+/* 调整按钮组间距 */
+.button-group {
+  gap: 20rpx;
+  margin: 30rpx 0;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
