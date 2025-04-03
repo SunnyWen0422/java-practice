@@ -1,0 +1,15 @@
+<view class="container">
+  <view class="header">
+    <text class="title">{{selectedDate}} 学习累计时长：{{totalDuration}}</text>
+  </view>
+  <textarea 
+    class="note-input" 
+    placeholder="请输入笔记内容" 
+    value="{{noteContent}}" 
+    bindinput="onNoteInput"
+  ></textarea>
+  <view class="action-buttons">
+    <button class="btn save-btn" bindtap="saveNote">保存</button>
+    <button class="btn delete-btn" bindtap="deleteNote">删除</button>
+  </view>
+</view>

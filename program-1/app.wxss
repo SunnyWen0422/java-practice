@@ -1,0 +1,22 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+/* 新增全局样式 */
+page {
+  --primary-color: #4A90E2;      /* 主色调-科技蓝 */
+  --secondary-color: #7ED321;    /* 辅助色-活力绿 */
+  --bg-gradient: linear-gradient(135deg, #F5F7FA 0%, #EFF2F6 100%);
+  --text-primary: #2C3E50;       /* 主要文字颜色 */
+  --text-secondary: #95A5A6;     /* 次要文字颜色 */
+  --card-shadow: 0 8rpx 30rpx rgba(0,0,0,0.05);
+  
+  background: var(--bg-gradient);
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+}
