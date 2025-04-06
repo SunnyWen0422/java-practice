@@ -12,40 +12,24 @@
   font-weight: bold;
 }
 
-.view-toggle {
-  margin-bottom: 20rpx;
-}
-
-button {
-  width: 100%;
-  padding: 10rpx;
-  margin: 10rpx 0;
-  background-color: #f5f7fa;
-  border: 1px solid #ccc;
-  border-radius: 10rpx;
-  text-align: center;
-}
-
-.chart-container {
-  width: 100%;
-  height: 400rpx;
-}
-
-.chart {
-  width: 100%;
-  height: 100%;
-}
-
-.list-container {
-  width: 100%;
-}
-
 .date-selector {
   margin-bottom: 20rpx;
 }
 
+.picker {
+  padding: 10rpx;
+  border: 1px solid #ccc;
+  border-radius: 10rpx;
+  background-color: #fff;
+}
+
 .records {
   margin-top: 20rpx;
+}
+
+.record-header {
+  font-weight: bold;
+  margin-bottom: 10rpx;
 }
 
 .record {

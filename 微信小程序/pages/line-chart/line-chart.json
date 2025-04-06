@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "历史查询",
+  "navigationBarTitleText": "折线视图",
   "usingComponents": {
     "ec-canvas": "/components/ec-canvas/ec-canvas"
   }

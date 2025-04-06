@@ -1,9 +1,12 @@
-<!--pages/index/index.wxml-->
 <view class="container">
   <text class="title">{{i18n.title}}</text>
   
   <!-- 时钟画布 -->
-  <canvas class="clock" canvas-id="clockCanvas"></canvas>
+  <canvas 
+    id="clockCanvas" 
+    type="2d"
+    style="width: 200px; height: 200px;">
+  </canvas>
 
   <!-- 计时器显示 -->
   <text class="timer-text">{{formattedTimer}}</text>
@@ -12,6 +15,7 @@
   <view class="stopwatch-container">
     <text class="stopwatch-time">{{stopwatchTime}}</text>
   </view>
+
 
   <!-- 整合后的功能按钮组 -->
   <view class="button-group">

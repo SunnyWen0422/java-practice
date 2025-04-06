@@ -1,0 +1,25 @@
+<view class="container">
+  <view class="header">
+    <text class="title">选择日期</text>
+  </view>
+  
+  <view class="date-selector">
+    <picker mode="date" start="2020-01-01" end="2030-12-31" value="{{selectedDate}}" bindchange="onDateChange">
+      <view class="picker">
+        选择日期：{{selectedDate}}
+      </view>
+    </picker>
+  </view>
+  
+  <view class="records">
+    <view class="record-header">
+      <text>累计时长：{{totalDuration}}</text>
+    </view>
+    
+    <view wx:for="{{dailyRecords}}" wx:key="index" class="record">
+      <text>开始时间：{{item.startTime}}</text>
+      <text>结束时间：{{item.endTime}}</text>
+      <text>持续时间：{{item.duration}}</text>
+    </view>
+  </view>
+</view>
