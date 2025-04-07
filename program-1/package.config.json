@@ -1,0 +1,40 @@
+{
+    "projectArchitecture": "miniProgram",
+    "appid": "wxf0e75b670599834a",
+    "projectname": "%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F",
+    "compileType": "miniprogram",
+    "libVersion": "3.7.12",
+    "packOptions": {
+      "ignore": [],
+      "include": []
+    },
+    "condition": {},
+    "setting": {
+      "coverView": true,
+      "es6": true,
+      "postcss": true,
+      "minified": true,
+      "enhance": true,
+      "showShadowRootInWxmlPanel": true,
+      "compileHotReLoad": true,
+      "packNpmManually": true,
+      "packNpmRelationList": [
+        {
+          "packageJsonPath": "miniProgram/package.json",
+          "miniprogramNpmDistDir": "miniprogram"
+        }
+      ],
+      "ignoreDevUnusedFiles": false,
+      "ignoreUploadUnusedFiles": false,
+      "babelSetting": {
+        "ignore": [],
+        "disablePlugins": [],
+        "outputPath": ""
+      }
+    },
+    "editorSetting": {
+      "tabIndent": "insertSpaces",
+      "tabSize": 2
+    },
+    "simulatorPluginLibVersion": {}
+  }

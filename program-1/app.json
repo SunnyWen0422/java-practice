@@ -2,8 +2,10 @@
     "pages": [
       "pages/index/index",
       "pages/history-query/history-query",
-      "pages/note/note", 
-      "pages/notebook/notebook"
+      "pages/note/note",
+      "pages/notebook/notebook",
+      "pages/line-chart/line-chart",
+      "pages/calendar/calendar"
     ],
     "window": {
       "navigationBarTitleText": "学习计时器",

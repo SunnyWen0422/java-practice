@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "学习趋势",
+    "usingComponents": {
+      "ec-canvas": "../../components/echarts"
+    }
+  }

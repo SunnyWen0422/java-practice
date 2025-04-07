@@ -20,3 +20,15 @@ page {
   background: var(--bg-gradient);
   font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
 }
+
+/* 暗黑模式支持 */
+@media (prefers-color-scheme: dark) {
+  page {
+    --primary-color: #4A90E2;
+    --secondary-color: #7ED321;
+    --bg-gradient: linear-gradient(135deg, #1F2937 0%, #111827 100%);
+    --text-primary: #FFFFFF;
+    --text-secondary: #D1D5DB;
+    --card-shadow: 0 8rpx 30rpx rgba(0,0,0,0.2);
+  }
+}

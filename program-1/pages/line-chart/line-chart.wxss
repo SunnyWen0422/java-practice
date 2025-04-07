@@ -1,0 +1,14 @@
+/* line-chart.wxss */
+.picker {
+    padding: 20rpx;
+    background: #f0f0f0;
+    margin: 20rpx;
+    border-radius: 8rpx;
+    text-align: center;
+  }
+  
+  .btn-group button {
+    margin: 10rpx;
+    display: inline-block;
+    width: 40%;
+  }

@@ -1,0 +1,17 @@
+<!-- line-chart.wxml -->
+<view class="container">
+  <picker 
+    mode="selector" 
+    range="{{months}}" 
+    value="{{months.indexOf(currentMonth)}}" 
+    bindchange="onMonthChange">
+    <view class="picker">当前月份：{{currentMonth}}</view>
+  </picker>
+  
+  <ec-canvas 
+    id="chart" 
+    canvas-id="line-chart" 
+    ec="{{ec}}" 
+    style="width:100%;height:500rpx">
+  </ec-canvas>
+</view>
